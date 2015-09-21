@@ -1,0 +1,45 @@
+
+
+puts
+puts "would you like to play Mad Lib with me?"
+answer = gets.chomp.downcase
+puts
+if answer == "no"
+  puts
+  puts "That's okay."
+  puts "I didn't want to play with you either."
+  puts
+  
+elsif answer == "yes"
+  system("say '#{"Great.  What is your name?"}'")
+  name = gets.chomp
+  system ("say '#{"Ah!"}'")
+  system ("say '#{"I once had a goldfish named, '#{name}'"}'")
+  system ("say '#{"Never mind."}'")
+  system ("say '#{"Please type in an i n g  verb"}'")
+  verb = gets.chomp
+  system ("say '#{"Now type in a noun"}'")
+  noun = gets.chomp
+  system ("say '#{"Good.  How about an adjective"}'")
+  adjective = gets.chomp
+  system ("say '#{"And lastly.  Type in the name of a good friend"}'")
+  friend = gets.chomp
+  
+  system ("say '#{"Okay, '#{name}'"}'")
+  system ("say '#{"Here we go"}'")
+    
+  system ("say '#{"Let me tell you about '#{friend}' the '#{noun}'"}'")
+  system ("say '#{friend}' was a '#{adjective}' '#{noun}'")
+  system ("say '#{"and was much better at '#{verb}' than you"}'")
+  system ("say '#{"Well,"}'")
+  system ("say '#{"That is really all I had to say about that"}'")
+  system ("say '#{"Thank you '#{name}'"}'")
+  system ("say '#{"Good bye"}'") 
+
+else
+  puts
+  puts "I couldn't understand your answer."
+  puts "Please try again"
+end
+
+ 
