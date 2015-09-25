@@ -1,0 +1,110 @@
+
+
+def table_header
+  puts
+  puts "|------------------ My To Do List -------------------------|"
+  puts "|- # -| |-------------- Task ---------------| |- Complete -|"
+  puts
+end
+
+def first_column
+  print "   "
+end
+
+def second_column
+  print "      "
+end
+
+def third_column
+  task_length = Temp['task'].length
+  start_location = 33 - task_length
+  second_column
+  for i in 0..start_location
+    print " "
+  end
+end
+
+def make_changes
+  puts "Would you like to delete, add, or edit a task? (type d/a/e)"
+  action = gets.chomp.downcase
+  case action
+    when "a"
+      puts "Please type in task name"
+      task_name = gets.chomp
+      puts "Is task complete?  (yes/no)"
+      task_complete = gets.chomp.downcase
+    when "d"
+      puts "Which task should I delete?"
+      task_to_delete = gets.chomp.to_i
+    when "e"
+      puts "Which task would you like to edit?"
+      task_to_edit = gets.chomp.to_i
+  end
+end
+
+
+
+temp = File.read("data.txt")
+Temp = eval(temp)
+
+puts
+puts "Here is your current To Do list."
+puts
+table_header
+
+first_column
+print Temp['number']
+second_column
+print Temp['task']
+third_column
+print Temp['complete?']
+puts
+puts
+
+puts "Would you like to make any changes?"
+answer = gets.chomp.downcase 
+puts
+puts answer
+puts
+
+if answer == "yes" 
+  puts "Ok."  
+  puts "Let's make changes now."
+  puts
+  make_changes 
+
+  
+elsif answer =="no"
+  puts "Okay."
+  puts "Good bye."
+  puts
+else
+  puts "I couldn't understand your answer."
+  puts "Please try again and answer 'yes' or 'no'."
+  puts
+end
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
