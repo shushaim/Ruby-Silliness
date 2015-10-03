@@ -1,7 +1,7 @@
 
 
 puts
-puts "would you like to play Mad Lib with me?"
+system ("say '#{"would you like to play Mad Lib with me?"}'") 
 answer = gets.chomp.downcase
 puts
 if answer == "no"
@@ -13,7 +13,7 @@ if answer == "no"
 elsif answer == "yes"
   system("say '#{"Great.  What is your name?"}'")
   name = gets.chomp
-  system ("say '#{"Ah!"}'")
+  system ("say '#{"That is funny"}'")
   system ("say '#{"I once had a goldfish named, '#{name}'"}'")
   system ("say '#{"Never mind."}'")
   system ("say '#{"Please type in an i n g  verb"}'")
