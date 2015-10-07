@@ -42,8 +42,6 @@ def make_changes
   end
 end
 
-
-
 temp = File.read("data.txt")
 Temp = eval(temp)
 
@@ -73,7 +71,6 @@ if answer == "yes"
   puts
   make_changes 
 
-  
 elsif answer =="no"
   puts "Okay."
   puts "Good bye."
