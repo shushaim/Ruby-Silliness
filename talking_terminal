@@ -14,7 +14,7 @@ elsif answer == "yes"
   system("say '#{"Great.  What is your name?"}'")
   name = gets.chomp
   system ("say '#{"That is funny"}'")
-  system ("say '#{"I once had a goldfish named, '#{name}'"}'")
+  system ("say '#{"I love the name, '#{name}'"}'")
   system ("say '#{"Never mind."}'")
   system ("say '#{"Please type in an i n g  verb"}'")
   verb = gets.chomp
